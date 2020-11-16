@@ -1,0 +1,239 @@
+.sp-form {
+  .el-form-item {
+    .el-form-item__content {
+      text-align: left;
+      .el-select, .el-cascader, .el-input, .el-range-editor, .el-textarea {
+        width: 100%;
+      }
+    }
+  }
+  .is-disabled + .el-upload--picture-card {
+    display: none;
+  }
+  .el-form--label-top {
+    .el-form-item, .sp-handler-bar {
+      margin-right: 20px;
+    }  
+  }
+  .sp-el-col {
+    position: relative;
+    display: flex;
+    .sp-el-form-item {
+      flex: 1 1 auto;
+    }
+    .right-span {
+      flex: 0 0 auto;
+      padding-left: 5px;
+      height: 30px;
+      line-height: 30px;      
+    }
+  }
+  .dynamic-handler {
+    margin-left: 10px;
+  }
+}
+.sp-form-search {
+  .el-form-item--mini.el-form-item {
+    margin: 0 5px 10px 5px;
+    .el-form-item__content {
+      height: 29px;
+    }
+  }
+}
+.sp-el-collapse {
+  .sp-el-collapse-item {
+    .el-collapse-item__wrap {
+      border-bottom: none;
+    }
+    .el-collapse-item__header {
+      display: none !important;
+    }
+    .el-collapse-item__content {
+      padding-bottom: 0;
+      position: relative;
+      .search-more {
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        left: 0;
+        width: 120px;
+        text-align: left;        
+      }
+    }
+  }  
+}
+
+.sp-table {
+  width: 99%;
+  margin: 0 auto;
+  .el-table {
+    td {
+      font-size: 12px;
+      color: #606266;
+      font-family: Chinese Quote,-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    }
+    th {
+      background-color: #fafafa;
+    }
+  }
+  .el-table__expanded-cell[class*=cell] {
+    padding: 12px 20px;
+  }
+  // .table-menu-wrap {
+  //   .el-button {
+  //     margin-left: 0;
+  //     margin-right: 8px;
+  //   }  
+  // }
+  .el-table__empty-block {
+    min-height: 0;
+  }
+  .highlight-current-row {
+    .el-table__row {
+      cursor: pointer;
+    }
+  }
+}
+.sp-crud {
+  width: 99%;
+  margin: 0 auto;
+  &-table{
+    width: 100%;
+  }
+  .sp-el-collapse {
+    border-top: none;
+    border-bottom: none;
+    margin-bottom: 10px;
+  }
+}
+.sp-crud-handle {
+  margin-bottom: 10px;
+  &:after{
+    content: '';
+    clear: both;
+    display: table;
+  }
+  &-left {
+    float: left;
+  }
+  &-right {
+    float: right;
+  }
+}
+.sp-pagination-wrap {
+  text-align: right;
+  padding: 10px;
+}
+.sp-crud-handle {
+  .sp-crud-handle-left {
+    .el-button {
+      margin-left: 0;
+      margin-right: 8px;
+    }
+  }
+}
+.sp-tree-select-drown, .sp-textarea-layout  {
+  position: fixed;
+  z-index: 3000;
+  display: none;
+  border: solid 1px #E4E7ED;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
+  width: 100%;
+  max-height: 320px;
+  overflow-y: auto;
+}
+.sp-textarea-layout {
+  border: none;
+  min-width: 260px;
+  .el-textarea__inner {
+    min-width: 260px;
+  } 
+}
+// .sp-textarea {
+
+// }
+.sp-copy-el-input {
+  height: 28px;
+  cursor: pointer;
+  .el-input__inner {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap;     
+  }
+  .placeholder {
+    color: #A9A9A9
+  }
+}
+.sp-table-form {
+  .el-table td {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .cell {
+    .el-form-item {
+      margin-bottom: 0;
+      height: 45px;
+      position: relative;
+      .el-select {
+        width: 100%;
+      }
+      .el-form-item__content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        text-align: left; 
+        .el-form-item__error {
+          position: static;
+          height: 15px;
+          overflow-y: auto;          
+        }      
+      }
+      .el-form-item__label {
+        display: none;
+      }
+      .el-form-item__content {
+        margin-left: 0!important;
+      }      
+    }
+    .el-input--mini .el-input__inner {
+      padding: 0 5px;
+    }
+    .space-span {
+      display: inline-block;
+      padding: 6px 0;
+    }
+    &.el-tooltip {
+      .space-span {
+        display: inline;
+      }
+    }
+  }
+}
+@keyframes circular {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.sp-load-wrap {
+  text-align: center;
+  width: 100%;
+  height: 240px;
+  line-height: 240px;
+  background: #fff;  
+  .circular {
+    display: inline-block;
+    width: 42px;
+    vertical-align: middle;
+    animation: 1.8s linear circular infinite;
+  }
+}
+.el-table__fixed {
+  background: #fff;  
+}
